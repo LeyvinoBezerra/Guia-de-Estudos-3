@@ -1,0 +1,16 @@
+Resumo Banco de Dados Projeto e implementação cap.2 e .4
+
+Banco de dados o nome já diz tudo, é um conjuto de dados armazenados para ser
+gerenciado e consultados quando desejamos. Existe muito tipos bancos de dados diferentes 
+um para cada aréa da tecnologia.
+Vamos falar em mapa conceitual que introduz um Modelo Entidade relacionamento.
+Para introduzir quaisquer banco de dados precisamos saber primeiramente como o sistema 
+vai funcionar e quais são seus tipos de dados e tipos de bancos.
+Pegamos o paradgma orientação a objeto e observando o paradgma entidade relacionamento 
+vemos que a entidade é uma classe ou objeto. Uma entidade digamos ser algum que faz alguma coisa ou tem 
+atributos. Os atributos são informações e dados da entidade e os metodos são sua funcionalidades ou conjuntos de açoes 
+a ser feita pela entidade.
+No mapa conceitual usamos retagulos para descreve entidades e lozangulos para descrever as relaçoes entre as entidade 
+podemos ter também a cardinalidade: um para um; um para muitos; muitos para muitos;muitos para um.
+Com ajuda dos atributos sabemos cada cadinalidade que é abstraida pelo desenvolvedor de Banco de Dados
+seguindo para (MER) Modelo Entidade e relacionamento. 
