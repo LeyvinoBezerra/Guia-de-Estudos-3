@@ -1,0 +1,13 @@
+1) Pesquise sobre Heurística (termo falado no capítulo 2 da leitura
+proposta) e como essa técnica pode ajudar na identificação dos
+elementos de um MER (capitulo 4 da leitura proposta) em um texto.
+Apresente um conjunto de técnicas de heurística para cada elemento do
+MER.
+
+
+Usando às técnicas de heuristica para criar o MER (Modelo Identidade Relacionamento) pegamos 
+no texto gerado pelo analista de requisitos, usamos a gramatica da lingua portuguesa, para cria 
+os MER, Os Substativos em gerais são as entidades, objetos e classes. já alguma observação na entidade 
+geramos os atributos, que são as qualidade das entidades e suas informações. 
+Verbos geralmente são relacionamento entre os atributos e a cardinalidade são mais focado nas relaçoes
+entre as entidades. 
