@@ -3,11 +3,79 @@ proposta) e como essa técnica pode ajudar na identificação dos
 elementos de um MER (capitulo 4 da leitura proposta) em um texto.
 Apresente um conjunto de técnicas de heurística para cada elemento do
 MER.
+2) Você conceituou Requisitos no exercício passado. Como identificar
+requisitos por heurística em texto? A partir de requisitos, como saber
+os elementos do MER (dados) e o que são funcionalidades
+(ações/métodos de uma classe)? Crie um guia/ para isso.
 
-
+RESPOSTA:
 Usando às técnicas de heuristica para criar o MER (Modelo Identidade Relacionamento) pegamos 
 no texto gerado pelo analista de requisitos, usamos a gramatica da lingua portuguesa, para cria 
 os MER, Os Substativos em gerais são as entidades, objetos e classes. já alguma observação na entidade 
 geramos os atributos, que são as qualidade das entidades e suas informações. 
 Verbos geralmente são relacionamento entre os atributos e a cardinalidade são mais focado nas relaçoes
 entre as entidades. 
+
+ATIVIDADE 3: PRATICA
+
+
+Questão 1
+
+Os atefatos e toda analise de requisitos do modelo conceitual e logico nos dar 
+uma base para podermos abstrair os software. Essses modelos são muito importantes 
+para concretiza e formar umas diretrizes para o desenvolmento do software.
+
+Questão 3
+
+------------------------------------------------------------------------------------------------------------------------
+Trecho do requisito                                    | Elemento do MER (Dados)                    | Funcionalidade do sistema (Ação)
+------------------------------------------------------------------------------------------------------------------------
+"pegamos no texto gerado pelo analista de requisitos"  | Texto de requisitos (documento de entrada) | Importar texto de requisitos para o sistema
+------------------------------------------------------------------------------------------------------------------------
+"usamos a gramatica da lingua portuguesa"              | Gramática da língua portuguesa (regras)    | Analisar sintaticamente o texto para classificar
+------------------------------------------------------------------------------------------------------------------------
+"Os Substativos em gerais são as entidades, objetos    | Substantivos → Entidades, Objetos, Classes | Identificar substantivos e classificar como
+ e classes"                                            |                                            | candidatos a entidades
+------------------------------------------------------------------------------------------------------------------------
+"já alguma observação na entidade geramos os           | Observações/características → Atributos    | Extrair atributos associados a cada entidade
+ atributos, que são as qualidades das entidades        | (qualidades, informações)                  |
+ e suas informações"                                   |                                            |
+------------------------------------------------------------------------------------------------------------------------
+"Verbos geralmente são relacionamento entre os        | Verbos → Relacionamentos                   | Identificar relacionamentos entre entidades
+ atributos" (corrigindo: entre entidades)              |                                            | a partir dos verbos
+------------------------------------------------------------------------------------------------------------------------
+"cardinalidade são mais focado nas relaçoes entre     | Cardinalidades (1:1, 1:N, N:N)             | Definir cardinalidades dos relacionamentos
+ as entidades"                                         |                                            | com base no contexto
+------------------------------------------------------------------------------------------------------------------------
+4 
+ENTIDADE          | ATRIBUTO            | TIPO              | DESCRIÇÃO
+------------------|---------------------|-------------------|----------------------------------------------------
+TEXTO_REQUISITO   | id_texto            | INT (PK)          | Identificador único do texto
+                  | conteudo            | TEXT              | Conteúdo do texto do analista
+                  | data_entrada        | DATE              | Data de cadastro
+------------------|---------------------|-------------------|----------------------------------------------------
+SUBSTANTIVO       | id_substantivo      | INT (PK)          | Identificador único
+                  | palavra             | VARCHAR(100)      | O substantivo extraído
+                  | tipo_classe         | VARCHAR(50)       | Entidade / Objeto / Classe
+                  | id_texto            | INT (FK)          | Referência ao texto de origem
+------------------|---------------------|-------------------|----------------------------------------------------
+ENTIDADE          | id_entidade         | INT (PK)          | Identificador único
+                  | nome                | VARCHAR(100)      | Nome da entidade
+                  | id_substantivo      | INT (FK)          | Substantivo que originou
+------------------|---------------------|-------------------|----------------------------------------------------
+ATRIBUTO          | id_atributo         | INT (PK)          | Identificador único
+                  | nome                | VARCHAR(100)      | Nome do atributo
+                  | tipo_dado           | VARCHAR(30)       | Ex: VARCHAR, INT, DATE
+                  | id_entidade         | INT (FK)          | Entidade a que pertence
+------------------|---------------------|-------------------|----------------------------------------------------
+VERBO             | id_verbo            | INT (PK)          | Identificador único
+                  | palavra             | VARCHAR(100)      | O verbo extraído
+                  | id_texto            | INT (FK)          | Texto de origem
+------------------|---------------------|-------------------|----------------------------------------------------
+RELACIONAMENTO    | id_relacionamento   | INT (PK)          | Identificador único
+                  | nome                | VARCHAR(100)      | Nome do relacionamento
+                  | id_verbo            | INT (FK)          | Verbo que originou
+                  | entidade_origem     | INT (FK)          | Entidade de origem
+                  | entidade_destino    | INT (FK)          | Entidade de destino
+                  | cardinalidade       | VARCHAR(10)       | Ex: 1:N, N:N, 1:1
+
